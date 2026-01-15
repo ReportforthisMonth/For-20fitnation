@@ -13,7 +13,23 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'heading': ['BigNoodleTitling', 'Impact', 'sans-serif'],
+        'body': ['Montserrat', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        'gym': {
+          'dark': '#0A0A0A',
+          'blue': '#0066FF',
+          'blue-light': '#0095FF',
+          'blue-accent': '#0166FE',
+          'gray-light': '#E4E4E4',
+          'gray': '#BEBEBE',
+          'gray-dark': '#4E4E4E',
+          'text-dark': '#313131',
+          'text-medium': '#353535',
+          'text-light': '#606060',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
