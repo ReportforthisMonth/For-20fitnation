@@ -1,62 +1,357 @@
-import { DemoResponse } from "@shared/api";
-import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 
 export default function Index() {
-  const [exampleFromServer, setExampleFromServer] = useState("");
-  // Fetch users on component mount
-  useEffect(() => {
-    fetchDemo();
-  }, []);
-
-  // Example of how to fetch data from the server (if needed)
-  const fetchDemo = async () => {
-    try {
-      const response = await fetch("/api/demo");
-      const data = (await response.json()) as DemoResponse;
-      setExampleFromServer(data.message);
-    } catch (error) {
-      console.error("Error fetching hello:", error);
-    }
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
-      <div className="text-center">
-        {/* TODO: FUSION_GENERATION_APP_PLACEHOLDER replace everything here with the actual app! */}
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center justify-center gap-3">
-          <svg
-            className="animate-spin h-8 w-8 text-slate-400"
-            viewBox="0 0 50 50"
-          >
-            <circle
-              className="opacity-30"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
+    <div className="min-h-screen bg-gym-dark">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative w-full h-[769px] bg-gym-dark overflow-hidden">
+        {/* Blue Gradient Blurs */}
+        <div className="absolute right-[0px] top-[160px] w-[655px] h-[655px] rounded-full bg-gym-blue opacity-100" style={{ filter: 'blur(140px)' }}></div>
+        <div className="absolute left-[646px] top-[335px] w-[733px] h-[733px] rounded-full bg-gym-blue opacity-100" style={{ filter: 'blur(186px)' }}></div>
+        <div className="absolute left-[-19px] top-[160px] w-[1358px] h-[655px] rounded-full bg-gym-blue opacity-100" style={{ filter: 'blur(140px)' }}></div>
+        
+        {/* Background Image */}
+        <img 
+          src="https://api.builder.io/api/v1/image/assets/TEMP/c27a39a08bd0f9d7b40a7ce39a3026b874c0f87d?width=2901" 
+          alt="" 
+          className="absolute left-0 top-0 w-full h-[720px] object-cover"
+          style={{ filter: 'blur(1.77px)' }}
+        />
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full pt-[125px]">
+          <h1 className="text-white text-[77px] font-heading text-center uppercase" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+            TRAIN LIKE A PRO
+          </h1>
+          <div className="w-[369px] h-[30px] bg-white mt-8 shadow-[0_1.4px_18.7px_0_rgba(255,255,255,0.25)]"></div>
+          <p className="text-gym-blue-light text-[17px] font-body font-bold uppercase text-right mt-2" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+            Premium Facilities
+          </p>
+        </div>
+      </section>
+
+      {/* Services Bar */}
+      <section className="w-full h-[78px] bg-gym-gray-light flex items-center justify-center gap-20">
+        <Link to="/services/group-classes" className="text-gym-gray-dark text-[14px] font-body font-bold uppercase text-center hover:text-gym-blue transition-colors">
+          Group Classes
+        </Link>
+        <Link to="/services/personal-training" className="text-gym-gray-dark text-[14px] font-body font-bold uppercase text-center hover:text-gym-blue transition-colors">
+          Personal Training
+        </Link>
+        <Link to="/services/crossfit" className="text-gym-gray-dark text-[14px] font-body font-bold uppercase text-center hover:text-gym-blue transition-colors">
+          Cross fit
+        </Link>
+        <Link to="/services/less-mills" className="text-gym-gray-dark text-[14px] font-body font-bold uppercase text-center hover:text-gym-blue transition-colors">
+          Less mills CLasses
+        </Link>
+      </section>
+
+      {/* Features Section */}
+      <section className="w-full bg-gym-dark py-24 relative">
+        <div className="max-w-[1440px] mx-auto px-12">
+          <div className="relative w-full max-w-[852px] mx-auto">
+            {/* Feature 1: World Class Equipment */}
+            <div className="flex items-start gap-8 mb-32">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=441" 
+                alt="World Class Equipment" 
+                className="w-[221px] h-[348px] object-cover"
+              />
+              <div className="flex-1 pt-8">
+                <h2 className="text-white text-[49px] font-heading mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+                  World Class Equipment
+                </h2>
+                <p className="text-gym-gray text-[13px] font-body font-medium leading-relaxed capitalize">
+                  Train with the best tools in the industry. Our facility is stocked with state-of-the-art machinery, advanced cardio stations, and premium free weights designed to maximize your performance.
+                  <br /><br />
+                  Whether you are a beginner or a pro athlete, our world-class equipment ensures a safe, effective, and seamless workout experience every time you step on the floor.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 2: Certified Trainers */}
+            <div className="flex items-start gap-8 mb-32 flex-row-reverse">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=576" 
+                alt="Certified Trainers" 
+                className="w-[288px] h-[299px] object-cover"
+              />
+              <div className="flex-1 pt-8 text-right">
+                <h2 className="text-white text-[49px] font-heading mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+                  Certified Trainers
+                </h2>
+                <p className="text-gym-gray text-[13px] font-body font-medium leading-relaxed capitalize">
+                  Achieving your goals is faster and safer with expert guidance. Our team of certified personal trainers brings years of experience and physiological knowledge to your sessions.
+                  <br /><br />
+                  They are here to provide personalized workout plans, correct your form, and push you past your limits, ensuring you get real, lasting results without the guesswork.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 3: Community */}
+            <div className="flex items-start gap-8 mb-32">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=459" 
+                alt="Community" 
+                className="w-[230px] h-[327px] object-cover"
+              />
+              <div className="flex-1 pt-8">
+                <h2 className="text-white text-[49px] font-heading mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+                  Community
+                </h2>
+                <p className="text-gym-gray text-[13px] font-body font-medium leading-relaxed capitalize">
+                  You never have to do this alone. At Fitnation, we pride ourselves on building a supportive and inclusive community where members uplift one another.
+                  <br /><br />
+                  From high-energy group classes to a friendly culture on the gym floor, you will find the motivation, camaraderie, and accountability you need to stay consistent and actually enjoy your fitness journey.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 4: Prime Location */}
+            <div className="flex items-start gap-8 flex-row-reverse">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=512" 
+                alt="Prime Location" 
+                className="w-[256px] h-[343px] object-cover"
+              />
+              <div className="flex-1 pt-8 text-right">
+                <h2 className="text-white text-[49px] font-heading mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+                  Prime Location
+                </h2>
+                <p className="text-gym-gray text-[13px] font-body leading-relaxed capitalize">
+                  <span className="font-medium">
+                    Convenience is the key to consistency.
+                    <br /><br />
+                    We are situated in a prime location at the heart of{' '}
+                  </span>
+                  <span className="font-bold">DHA Phase 5,</span>
+                  <span className="font-medium">
+                    {' '}designed to fit perfectly into your busy lifestyle. With easy access and a central position, getting to your workout is hassle-free. We remove the obstacles between you and the gym, leaving you with no excuses and more time to focus on your health.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* View Brochure Button */}
+            <div className="flex justify-center mt-16">
+              <Link to="/brochure" className="bg-white h-[39px] px-12 flex items-center justify-center hover:bg-gym-gray-light transition-colors">
+                <span className="text-gym-text-medium text-[32px] font-heading">View Broacher</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Decorative Dumbbell Icon */}
+        <img 
+          src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=95" 
+          alt="" 
+          className="absolute left-[160px] top-[16px] w-[47px] h-[47px] rotate-90 opacity-96"
+          style={{ boxShadow: '0 1.4px 28.4px 0 rgba(255, 255, 255, 0.25)' }}
+        />
+      </section>
+
+      {/* Successful Stories Section */}
+      <section className="w-full bg-white py-20">
+        <div className="max-w-[1440px] mx-auto px-12">
+          <div className="flex items-center gap-4 mb-12">
+            <h2 className="text-gym-text-medium text-[49px] font-heading">Successful Stories</h2>
+            <img 
+              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=108" 
+              alt="" 
+              className="w-[54px] h-[54px]"
             />
-            <circle
-              className="text-slate-600"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="currentColor"
-              strokeWidth="5"
-              fill="none"
-              strokeDasharray="100"
-              strokeDashoffset="75"
+          </div>
+          
+          {/* Image Gallery */}
+          <div className="flex gap-9">
+            <img 
+              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=559" 
+              alt="Success Story 1" 
+              className="w-[280px] h-[460px] object-cover"
             />
-          </svg>
-          Generating your app...
-        </h1>
-        <p className="mt-4 text-slate-600 max-w-md">
-          Watch the chat on the left for updates that might need your attention
-          to finish generating
-        </p>
-        <p className="mt-4 hidden max-w-md">{exampleFromServer}</p>
-      </div>
+            <img 
+              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=559" 
+              alt="Success Story 2" 
+              className="w-[280px] h-[460px] object-cover"
+            />
+            <div className="w-[280px] h-[460px] bg-gym-gray-light"></div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="flex justify-center gap-16 mt-12">
+            <button className="hover:opacity-70 transition-opacity">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=133" 
+                alt="Previous" 
+                className="w-[66px] h-[34px]"
+              />
+            </button>
+            <button className="hover:opacity-70 transition-opacity">
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=67" 
+                alt="Next" 
+                className="w-[34px] h-[34px]"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Reviews Section */}
+      <section className="w-full bg-white py-12">
+        <div className="max-w-[1440px] mx-auto px-12 text-center">
+          <h2 className="text-white text-[34px] font-body font-semibold capitalize mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+            Clients Reviews
+          </h2>
+          {/* Star Rating */}
+          <div className="flex items-center justify-center gap-2">
+            {[...Array(5)].map((_, i) => (
+              <img 
+                key={i}
+                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=56" 
+                alt="Star" 
+                className="w-[28px] h-[29px]"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Membership Plans Section */}
+      <section className="w-full bg-gym-dark py-24">
+        <div className="max-w-[1440px] mx-auto px-12">
+          <div className="flex items-center justify-center gap-2 mb-16">
+            <h2 className="text-white text-[66px] font-heading text-center" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
+              Memberships Plans
+            </h2>
+            <img 
+              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=148" 
+              alt="" 
+              className="w-[74px] h-[69px]"
+            />
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="flex gap-[53px] justify-center max-w-[918px] mx-auto">
+            {/* Card 1: Gym Monthly */}
+            <div className="w-[271px] border border-white">
+              <div className="bg-white h-[140px] flex items-center justify-center px-8">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                  Gym Monthly
+                </h3>
+              </div>
+              <div className="py-12 px-8">
+                <p className="text-white text-[60px] font-heading text-center mb-8" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
+                  pkr 11,000
+                </p>
+                <p className="text-white text-[11px] font-body font-medium leading-relaxed capitalize mb-6">
+                  Our monthly membership helps you to keep your fitness goals on track without a commitment of any kind, while still enjoying all of the amenities that Fitnation has to offer.
+                </p>
+              </div>
+              <div className="bg-white h-[36px] flex items-center justify-center">
+                <p className="text-[#555] text-[11px] font-body uppercase text-center">
+                  <span className="font-bold">+ pkr </span>
+                  <span className="font-extrabold">6,000</span>
+                  <span className="font-bold"> Gym Registration fee</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2: Gym + Personal Training */}
+            <div className="w-[271px] border border-white">
+              <div className="bg-white h-[140px] flex items-center justify-center px-6">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                  Gym + Personal Training
+                </h3>
+              </div>
+              <div className="py-8 px-8">
+                <div className="bg-white w-[82px] h-[21px] flex items-center justify-center mx-auto mb-8">
+                  <span className="text-gym-gray-dark text-[12px] font-body font-bold uppercase">Monthly</span>
+                </div>
+                <p className="text-white text-[60px] font-heading text-center mb-8" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
+                  pkr 26,000
+                </p>
+                <p className="text-white text-[11px] font-body font-medium leading-relaxed capitalize mb-6">
+                  All the benefits of gym access plus customized workout plans and ongoing support from our certified personal trainers
+                </p>
+              </div>
+              <div className="bg-white h-[36px] flex items-center justify-center">
+                <p className="text-[#555] text-[11px] font-body uppercase text-center">
+                  <span className="font-bold">+ pkr </span>
+                  <span className="font-extrabold">6,000</span>
+                  <span className="font-bold"> Gym Registration fee</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3: Gym + Senior Personal Training */}
+            <div className="w-[271px] border border-white">
+              <div className="bg-white h-[176px] flex items-center justify-center px-6">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                  Gym + Senior Personal Training
+                </h3>
+              </div>
+              <div className="py-4 px-8">
+                <div className="bg-white w-[82px] h-[21px] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gym-gray-dark text-[12px] font-body font-bold uppercase">Monthly</span>
+                </div>
+                <p className="text-white text-[60px] font-heading text-center mb-6" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
+                  pkr 31,000
+                </p>
+                <p className="text-white text-[11px] font-body font-medium leading-relaxed capitalize mb-6">
+                  Tailored fitness programs with specialized personal trainers focused on safe, effective training to support strength, mobility, and overall wellness.
+                </p>
+              </div>
+              <div className="bg-white h-[36px] flex items-center justify-center">
+                <p className="text-[#555] text-[11px] font-body uppercase text-center">
+                  <span className="font-bold">+ pkr </span>
+                  <span className="font-extrabold">6,000</span>
+                  <span className="font-bold"> Gym Registration fee</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* View Full Plans CTA */}
+          <div className="flex items-center justify-center gap-8 mt-12">
+            <p className="text-white text-[19px] font-body font-bold uppercase text-center" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
+              Click here to View full Plans
+            </p>
+            <Link to="/membership" className="bg-white h-[38px] px-6 flex items-center justify-center hover:bg-gym-gray-light transition-colors">
+              <span className="text-gym-gray-dark text-[19px] font-body font-bold uppercase">View</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section - Want to try us out first? */}
+      <section className="w-full bg-gym-dark py-20">
+        <div className="max-w-[1440px] mx-auto px-12 text-center">
+          <h2 className="text-white text-[29px] font-body font-semibold capitalize mb-8" style={{ textShadow: '0 0 19px rgba(255, 255, 255, 0.30)' }}>
+            Want to try us out first?
+          </h2>
+          <Link to="/day-pass" className="inline-block bg-white h-[46px] px-12 hover:bg-gym-gray-light transition-colors">
+            <span className="text-gym-blue-accent text-[22px] font-body font-bold italic uppercase leading-[46px]" style={{ textShadow: '0 0 19px rgba(255, 255, 255, 0.30)' }}>
+              Get 1 Day Pass
+            </span>
+          </Link>
+          
+          {/* Large Join Now Text */}
+          <div className="mt-16">
+            <h3 
+              className="text-white text-[281px] font-heading opacity-68 mix-blend-soft-light leading-none"
+            >
+              Join Now
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
