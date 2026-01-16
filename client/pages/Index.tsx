@@ -188,6 +188,13 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Clients Reviews White Section */}
+      <section className="w-full bg-white py-5">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 text-center">
+          {/* Stars removed */}
+        </div>
+      </section>
+
 
       {/* Membership Plans Section */}
       <section className="w-full bg-gym-dark mb-[72px] pt-36 pb-24">
