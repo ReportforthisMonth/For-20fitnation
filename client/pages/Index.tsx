@@ -151,7 +151,7 @@ export default function Index() {
       <section className="w-full bg-gym-dark py-12 md:py-16 lg:py-20">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col justify-center items-start">
           <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
-            <h2 className="text-white text-[32px] md:text-[40px] lg:text-[49px] font-heading overflow-hidden bg-white text-center rounded-none py-2 px-12 md:px-32 border-4 border-white mr-[-4px]" style={{ color: 'rgb(53, 53, 53)' }}>
+            <h2 className="text-[32px] md:text-[40px] lg:text-[49px] font-heading text-center border-4 border-white" style={{ color: 'rgb(53, 53, 53)', backgroundColor: 'rgba(255, 255, 255, 1)', overflow: 'hidden', marginRight: '-4px', padding: '0 120px 0 26px' }}>
               Successful Stories
             </h2>
           </div>
