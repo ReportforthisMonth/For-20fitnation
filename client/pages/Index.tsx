@@ -240,7 +240,7 @@ export default function Index() {
             {/* Card 1: Gym Monthly */}
             <div className="w-full max-w-[271px] mx-auto border border-white">
               <div className="bg-white h-[140px] flex items-center justify-center px-8">
-                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-left">
                   Gym Monthly
                 </h3>
               </div>
@@ -264,11 +264,11 @@ export default function Index() {
             {/* Card 2: Gym + Personal Training */}
             <div className="w-full max-w-[271px] mx-auto border border-white">
               <div className="bg-white h-[140px] flex items-center justify-center px-6">
-                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-left">
                   Gym + Personal Training
                 </h3>
               </div>
-              <div className="py-8 px-8">
+              <div className="py-8 px-8 pb-12">
                 <div className="bg-white w-[82px] h-[21px] flex items-center justify-center mx-auto mb-8">
                   <span className="text-gym-gray-dark text-[12px] font-body font-bold uppercase">Monthly</span>
                 </div>
@@ -291,11 +291,11 @@ export default function Index() {
             {/* Card 3: Gym + Senior Personal Training */}
             <div className="w-full max-w-[271px] mx-auto border border-white md:col-span-2 lg:col-span-1">
               <div className="bg-white h-[176px] flex items-center justify-center px-6">
-                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-center">
+                <h3 className="text-gym-text-dark text-[29px] font-body font-extrabold uppercase leading-tight text-left">
                   Gym + Senior Personal Training
                 </h3>
               </div>
-              <div className="py-4 px-8">
+              <div className="py-4 px-8 pb-8">
                 <div className="bg-white w-[82px] h-[21px] flex items-center justify-center mx-auto mb-4">
                   <span className="text-gym-gray-dark text-[12px] font-body font-bold uppercase">Monthly</span>
                 </div>
