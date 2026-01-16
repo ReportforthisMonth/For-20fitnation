@@ -27,10 +27,11 @@ export default function Index() {
           <h1 className="text-white text-[40px] sm:text-[55px] md:text-[65px] lg:text-[77px] font-heading text-center uppercase" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
             TRAIN LIKE A PRO
           </h1>
-          <div className="w-[250px] sm:w-[300px] md:w-[369px] h-[20px] md:h-[30px] bg-white mt-6 md:mt-8 shadow-[0_1.4px_18.7px_0_rgba(255,255,255,0.25)]"></div>
-          <p className="text-gym-blue-light text-[14px] md:text-[17px] font-body font-bold uppercase text-center md:text-right mt-2 px-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
-            Premium Facilities
-          </p>
+          <div className="w-[250px] sm:w-[300px] md:w-[369px] h-[20px] md:h-[30px] bg-white shadow-[0_1.4px_18.7px_0_rgba(255,255,255,0.25)] flex flex-col justify-center items-end">
+            <p className="text-gym-blue-light text-[14px] md:text-[17px] font-body font-bold uppercase text-right px-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+              Premium Facilities
+            </p>
+          </div>
         </div>
       </section>
 
@@ -137,102 +138,70 @@ export default function Index() {
             </div>
 
             {/* View Brochure Button */}
-            <div className="flex justify-center mt-12 md:mt-16">
+            <div className="flex justify-center px-[200px]">
               <Link to="/brochure" className="bg-white h-[35px] md:h-[39px] px-8 md:px-12 flex items-center justify-center hover:bg-gym-gray-light transition-colors">
                 <span className="text-gym-text-medium text-[24px] md:text-[28px] lg:text-[32px] font-heading">View Broacher</span>
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Decorative Dumbbell Icon */}
-        <img 
-          src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=95" 
-          alt="" 
-          className="hidden lg:block absolute left-[160px] top-[16px] w-[47px] h-[47px] rotate-90 opacity-96"
-          style={{ boxShadow: '0 1.4px 28.4px 0 rgba(255, 255, 255, 0.25)' }}
-        />
       </section>
 
       {/* Successful Stories Section */}
-      <section className="w-full bg-white py-12 md:py-16 lg:py-20">
-        <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
+      <section className="w-full bg-gym-dark py-12 md:py-16 lg:py-20">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 flex flex-col justify-center items-start">
           <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
-            <h2 className="text-gym-text-medium text-[32px] md:text-[40px] lg:text-[49px] font-heading">Successful Stories</h2>
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=108" 
-              alt="" 
-              className="w-[42px] md:w-[54px] h-[42px] md:h-[54px]"
-            />
+            <h2 className="text-white text-[32px] md:text-[40px] lg:text-[49px] font-heading overflow-hidden bg-white text-center rounded-none py-2 px-12 md:px-32 border-4 border-white mr-[-4px]" style={{ color: 'rgb(53, 53, 53)' }}>
+              Successful Stories
+            </h2>
           </div>
           
           {/* Image Gallery */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-9 w-full">
             <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=559" 
+              src="https://cdn.builder.io/api/v1/image/assets%2F000a334ed8be43baa8221d4c490e04ff%2F37cb60cf15554431b8e2bb81add59eb0" 
               alt="Success Story 1" 
-              className="w-full h-[380px] md:h-[420px] lg:h-[460px] object-cover"
+              className="w-full h-[380px] md:h-[500px] lg:h-[653px] object-cover"
             />
             <img 
               src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=559" 
               alt="Success Story 2" 
-              className="w-full h-[380px] md:h-[420px] lg:h-[460px] object-cover"
+              className="w-full h-[380px] md:h-[500px] lg:h-[653px] object-cover"
             />
-            <div className="w-full h-[380px] md:h-[420px] lg:h-[460px] bg-gym-gray-light hidden sm:block"></div>
+            <div className="w-full h-[380px] md:h-[500px] lg:h-[653px] bg-white hidden sm:block"></div>
           </div>
 
           {/* Navigation Arrows */}
-          <div className="flex justify-center gap-8 md:gap-16 mt-8 md:mt-12">
-            <button className="hover:opacity-70 transition-opacity">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=133" 
-                alt="Previous" 
-                className="w-[56px] md:w-[66px] h-[28px] md:h-[34px]"
-              />
-            </button>
-            <button className="hover:opacity-70 transition-opacity">
-              <img 
-                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=67" 
-                alt="Next" 
-                className="w-[28px] md:w-[34px] h-[28px] md:h-[34px]"
-              />
-            </button>
+          <div className="flex justify-center gap-8 md:gap-16 mt-8 md:mt-12 w-full">
+            <button className="hover:opacity-70 transition-opacity" />
+            <button className="hover:opacity-70 transition-opacity" />
           </div>
+        </div>
+      </section>
+
+      {/* Clients Reviews Title - moved to dark section */}
+      <section className="w-full bg-gym-dark py-0">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 text-center pb-12">
+          <h2 className="text-white text-[28px] md:text-[32px] lg:text-[34px] font-body font-semibold capitalize mb-0" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
+            Clients Reviews
+          </h2>
         </div>
       </section>
 
       {/* Clients Reviews Section */}
-      <section className="w-full bg-white py-8 md:py-12">
+      <section className="w-full bg-white py-5">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12 text-center">
-          <h2 className="text-white text-[28px] md:text-[32px] lg:text-[34px] font-body font-semibold capitalize mb-4" style={{ textShadow: '0 0 29px rgba(255, 255, 255, 0.30)' }}>
-            Clients Reviews
-          </h2>
-          {/* Star Rating */}
-          <div className="flex items-center justify-center gap-1 md:gap-2">
-            {[...Array(5)].map((_, i) => (
-              <img 
-                key={i}
-                src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=56" 
-                alt="Star" 
-                className="w-[22px] md:w-[28px] h-[23px] md:h-[29px]"
-              />
-            ))}
-          </div>
+          {/* Star Rating removed */}
         </div>
       </section>
 
       {/* Membership Plans Section */}
-      <section className="w-full bg-gym-dark py-12 md:py-20 lg:py-24">
+      <section className="w-full bg-gym-dark mb-[72px] pt-36 pb-24">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12">
           <div className="flex items-center justify-center gap-2 mb-12 md:mb-16">
             <h2 className="text-white text-[36px] md:text-[52px] lg:text-[66px] font-heading text-center" style={{ textShadow: '0 0 25px rgba(255, 255, 255, 0.30)' }}>
               Memberships Plans
             </h2>
-            <img 
-              src="https://api.builder.io/api/v1/image/assets/TEMP/f72fda95afb61b39a358c474d4224cf40013d3c4?width=148" 
-              alt="" 
-              className="w-[60px] md:w-[74px] h-[56px] md:h-[69px]"
-            />
           </div>
 
           {/* Pricing Cards */}
